@@ -8,6 +8,38 @@
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
 
+function timmer(){
+  var time = new Date();
+  y = time.getFullYear();
+  z = time.getMonth();
+  w = time.getDay();
+  d = time.getDate();
+  h = time.getHours();
+  time_h = h;
+  if (h<10){
+    time_h = '0'+ time_h;
+  }
+  m = time.getMinutes();
+  time_m = m;
+  if (m<10){
+    time_m = '0'+ time_m;
+  }
+  s = time.getSeconds();
+  time_s = s;
+  if (s<10){
+    time_s = '0'+ time_s;
+  }
+  ms = time.getMilliseconds();
+  
+  
+  
+
+  time_hms = time_h+':'+ time_m+':'+time_s;
+  
+  
+  document.getElementById('unique_bot').innerHTML = time_hms ;
+  setTimeout("timmer()",100);}
+
 (function( $ ){
 
 	var createdElements = [];
